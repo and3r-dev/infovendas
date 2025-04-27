@@ -51,6 +51,16 @@ public class User : BaseEntity, IUser
     public UserStatus Status { get; set; }
 
     /// <summary>
+    /// Gets or sets the branch ID this user belongs to
+    /// </summary>
+    public Guid? BranchId { get; set; }
+
+    /// <summary>
+    /// Gets or sets the branch this user belongs to
+    /// </summary>
+    public virtual Branch? Branch { get; set; }
+
+    /// <summary>
     /// Gets the date and time when the user was created.
     /// </summary>
     public DateTime CreatedAt { get; set; }
